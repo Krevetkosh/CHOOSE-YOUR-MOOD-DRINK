@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CHOOSE YOUR MODE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: aliceblue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      margin: 2rem 0;
+      padding-bottom: 1rem;
+      font-family: "Dela Gothic One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .drink-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 0 2rem;
+    }
+
+    .card-container {
+      cursor: pointer;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #9c60b4;
+      border-radius: 20px;
+      padding: 20px;
+      width: 330px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.199);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      height: 125px;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+    }
+
+    .one {
+      background-color: #96e047;
+    }
+
+    .two {
+      background-color: #3359c9;
+    }
+
+    .three {
+      background-color: #edba40;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-family: "Dela Gothic One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      font-family: "Space Grotesk", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      text-align: center;
+    }
+
+    .solo {
+      background-color: #272924;
+      color: #96e047;
+      border-radius: 20px;
+      padding: 1rem;
+    }
+
+    .social {
+      background-color: #e9ddfa;
+      border-color: bold #272924;
+      color: #101297;
+      border-radius: 20px;
+      padding: 1rem;
+    }
+
+    .Kiki {
+      background-color: #5f3717;
+      color: #f0be18;
+      border-radius: 20px;
+      padding: 1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      width: 100%;
+      padding: 0 15px 15px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-top: 20px;
+      font-family: "Space Grotesk", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    .g {
+      border: 3px solid #272924;
+    }
+
+    .b {
+      border: 3px solid #101297;
+    }
+
+    .y {
+      border: 3px solid #5f3717;
+    }
+
+    .social-p {
+      color: #e9ddfa;
+    }
+
+    
+    #message-box {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      font-family: Arial, sans-serif;
+      font-size: 1.1rem;
+      z-index: 9999;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CHOOSE YOUR MOOD OF THE DAY</h1>
+
+  <section class="drink-cards">
+    <div class="card-container">
+      <div class="card one" data-message="You chose Solo Grind Mode! Time to focus and win!">
+        <img src="./monster.png" alt="Monster">
+        <h3 class="solo">Solo Grind Mode</h3>
+        <p class="solo-p">Inspired and fueled by energy drinks, it’s the perfect morning mood to kickstart your day!</p>
+      </div>
+      <div class="tags">
+        <div class="tag g">Rad</div>
+        <div class="tag g">Alternative</div>
+        <div class="tag g">Silent Hill</div>
+        <div class="tag g">Morning</div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card two" data-message="You chose Mellow Mood! Time for some deep talks!">
+        <img src="./soju.png" alt="Soju">
+        <h3 class="social">Mellow Mood</h3>
+        <p class="social-p">Romantic night with orange lights, cozy home, and relaxed посиделки vibes.</p>
+      </div>
+      <div class="tags">
+        <div class="tag b">Blue</div>
+        <div class="tag b">Night</div>
+        <div class="tag b">Sparkles</div>
+        <div class="tag b">Corndog</div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card three" data-message="You chose Kiki's GO-TO! She's proud of you!">
+        <img src="./1000046276.png" alt="Iced Tea">
+        <h3 class="Kiki">Kiki's GO-TO</h3>
+        <p class="kiki-p">When I want to unwind, iced tea is my cozy little secret — perfect for calm moments, gaming, or cuddling.</p>
+      </div>
+      <div class="tags">
+        <div class="tag y">Refreshing</div>
+        <div class="tag y">Crisp</div>
+        <div class="tag y">Chilled</div>
+        <div class="tag y">Sweet</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <div id="message-box"></div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const messageBox = document.getElementById('message-box');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const message = card.getAttribute('data-message');
+        messageBox.textContent = message;
+        messageBox.style.opacity = '1';
+        messageBox.style.pointerEvents = 'auto';
+
+       
+        setTimeout(() => {
+          messageBox.style.opacity = '0';
+          messageBox.style.pointerEvents = 'none';
+        }, 3000);
+      });
+    });
+  </script>
+</body>
+</html>
